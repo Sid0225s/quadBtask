@@ -1,28 +1,45 @@
 #form form div,
 #form button {
-    margin: 10px 0 2px 0;
+  margin: 10px 0 2px 0;
+}
+.formsection {
+  display: flex;
+  justify-content: center;
+}
+#form {
+  border: 1px solid rgb(136, 132, 132);
+  position: absolute;
+  top: 30%;
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
 }
 
 #form form,
 #form #button {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
 #form #button button {
-    background-color: green;
-    padding: 5px 30px;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
+  background-color: green;
+  padding: 5px 30px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.4s ease;
+}
+#form #button button:hover {
+  transform: scale(1.1);
 }
 
 #form #button button:nth-of-type(2) {
-    margin-left: 15px;
-    background-color: red;
+  margin-left: 15px;
+  background-color: red;
 }
 
 #form #message {
-    color: green;
+  color: green;
 }

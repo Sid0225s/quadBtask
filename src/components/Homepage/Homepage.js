@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../Navbar/Navbar";
 import "./Homepage.css";
 import Card from "../Card/Card";
 
@@ -36,11 +35,10 @@ export default function Homepage({ searchQuery }) {
 
   return (
     <div id="homepage">
-      <Navbar />
       <div id="searchbar">
         <input
           type="text"
-          placeholder="Search your show !"
+          placeholder="Search"
           onChange={(e) => changeSearch(e)}
           value={search}
         />

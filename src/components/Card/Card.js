@@ -12,10 +12,10 @@ export default function Card({
   site,
   searchQuery,
 }) {
-  let history = useNavigate();
+  const navigate = useNavigate();
+
   const openDescription = () => {
-    history.push({
-      pathname: "/description",
+    navigate("/description", {
       state: {
         name: name,
         image: image,
