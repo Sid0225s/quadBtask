@@ -34,10 +34,12 @@ export default function Showpage() {
             </div>
             <div id="description">
               <div id="summary">
-                {location.state.summary.substring(
-                  3,
-                  location.state.summary.length - 4
-                )}
+                <p>
+                  {location.state.summary.substring(
+                    3,
+                    location.state.summary.length - 4
+                  )}
+                </p>
               </div>
               <div id="language">
                 <b>Language :</b> {location.state.language}{" "}

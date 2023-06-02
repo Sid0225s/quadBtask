@@ -70,5 +70,11 @@
   #showpage #show-details #description {
     width: 100%;
     padding-left: 0;
+    text-align: center;
+  }
+  #showpage #show-details #image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }

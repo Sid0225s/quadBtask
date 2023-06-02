@@ -19,8 +19,8 @@
   width: 100px;
   font-size: 16px;
   padding: 5px;
-  color: white;
-  background-color: green;
+  color: black;
+  background-color: rgb(228, 222, 45);
   border: 1px solid #1f93e0;
   border-radius: 7px;
   cursor: pointer;
