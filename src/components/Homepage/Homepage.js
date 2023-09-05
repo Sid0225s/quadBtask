@@ -3,20 +3,17 @@ import "./Homepage.css";
 import Card from "../Card/Card";
 
 export default function Homepage({ searchQuery }) {
-  let url;
-  url = ` https://api.tvmaze.com/search/shows?q=${searchQuery}`;
-
   const [shows, setShows] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [search, setsearch] = useState("");
+  const [search, setSearch] = useState("");
 
   const changeSearch = (e) => {
-    setsearch(e.target.value);
+    setSearch(e.target.value);
   };
+
   const searchShows = () => {
     if (search.length > 0) {
-      url = `https://api.tvmaze.com/search/shows?q=${search}`;
-      fetch(url)
+      const apiUrl = `https://api.tvmaze.com/search/shows?q=${search}`;
+      fetch(apiUrl)
         .then((res) => res.json())
         .then((result) => {
           setShows(result);
@@ -25,13 +22,13 @@ export default function Homepage({ searchQuery }) {
   };
 
   useEffect(() => {
-    fetch(url)
+    const apiUrl = `https://api.tvmaze.com/search/shows?q=${searchQuery}`;
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((result) => {
-        setIsLoaded(true);
         setShows(result);
       });
-  }, []);
+  }, [searchQuery]);
 
   return (
     <div id="homepage">
